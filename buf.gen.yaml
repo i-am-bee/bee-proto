@@ -1,0 +1,17 @@
+version: v1
+plugins:
+  ## Python
+  - plugin: buf.build/grpc/python:v1.62.1
+    out: gen/python
+  - plugin: buf.build/protocolbuffers/pyi:v26.1
+    out: gen/python
+  - plugin: buf.build/protocolbuffers/python:v26.1
+    out: gen/python
+  
+  ## TypeScript
+  - plugin: buf.build/connectrpc/es:v1.4.0
+    opt: target=ts
+    out: gen/typescript
+  - plugin: buf.build/bufbuild/es:v1.10.0
+    opt: target=ts
+    out: gen/typescript

@@ -1,0 +1,50 @@
+{
+  "name": "bee-proto",
+  "packageManager": "yarn@4.1.1",
+  "author": "IBM Corp.",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "yarn generate && tsup && yarn copyright",
+    "generate": "./scripts/generate.sh",
+    "copyright": "./scripts/copyright.sh"
+  },
+  "keywords": [
+    "bee",
+    "bee proto",
+    "bee agent framework"
+  ],
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.10.0",
+    "@connectrpc/connect": "^1.4.0"
+  },
+  "devDependencies": {
+    "lb4": "^1.0.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-am-bee/bee-proto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/i-am-bee/bee-proto/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": {
+      "import": {
+        "types": "./dist/proto/*.d.ts",
+        "default": "./dist/proto/*.js"
+      },
+      "require": {
+        "types": "./dist/proto/*.d.cts",
+        "default": "./dist/proto/*.cjs"
+      }
+    }
+  }
+}
