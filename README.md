@@ -20,7 +20,7 @@ If you make changes to the proto files in `./proto`, you need to re-generate the
 
 ## Bugs
 
-We are using [GitHub Issues](https://github.com/i-am-bee/bee-proto/issues) to manage our public bugs. We keep a close eye on this so before filing a new issue, try to make sure the problem does not already exist.
+We are using [GitHub Issues](https://github.com/i-am-bee/bee-proto/issues) to manage our public bugs. We keep a close eye on this, so before filing a new issue, please check to ensure it hasn't already been logged.
 
 ## Code of conduct
 
