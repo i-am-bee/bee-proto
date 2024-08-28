@@ -1,0 +1,21 @@
+{
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits"
+      },
+      "header": "# Changelog",
+      "infile": "CHANGELOG.md"
+    }
+  },
+  "npm": {
+    "skipChecks": true,
+    "publish": true
+  },
+  "hooks": {
+    "after:bump": ["yarn build"]
+  },
+  "github": {
+    "release": true
+  }
+}

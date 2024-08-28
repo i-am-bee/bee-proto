@@ -8,7 +8,8 @@
   "scripts": {
     "build": "yarn generate && tsup && yarn copyright",
     "generate": "./scripts/generate.sh",
-    "copyright": "./scripts/copyright.sh"
+    "copyright": "./scripts/copyright.sh",
+    "release": "release-it"
   },
   "keywords": [
     "bee",
@@ -20,7 +21,9 @@
     "@connectrpc/connect": "^1.4.0"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
     "lb4": "^1.0.0",
+    "release-it": "^17.6.0",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   },
