@@ -9,7 +9,8 @@
     "build": "yarn generate && tsup && yarn copyright",
     "generate": "./scripts/generate.sh",
     "copyright": "./scripts/copyright.sh",
-    "release": "release-it"
+    "release": "release-it",
+    "prepare": "husky"
   },
   "keywords": [
     "bee",
@@ -21,7 +22,10 @@
     "@connectrpc/connect": "^1.4.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
     "@release-it/conventional-changelog": "^8.0.1",
+    "husky": "^9.1.5",
     "lb4": "^1.0.0",
     "release-it": "^17.6.0",
     "tsup": "^8.2.4",
