@@ -25,7 +25,7 @@ service CodeInterpreterService {
 }
 
 message ExecuteRequest {
-  string executor_id = 1 [(buf.validate.field).string.pattern = "^[a-z0-9-]{1,32}$"];
+  reserved 1; // executor_id not used anymore
   string source_code = 2;
   map<string, string> files = 3 [(buf.validate.field).map = {
     keys: { string: { pattern: "^/[^/].*$" } }
@@ -65,7 +65,7 @@ message ParseCustomToolResponse {
 }
 
 message ExecuteCustomToolRequest {
-  string executor_id = 1 [(buf.validate.field).string.pattern = "^[a-z0-9-]{1,32}$"];
+  reserved 1; // executor_id not used anymore
   string tool_source_code = 2;
   string tool_input_json = 3;
 }

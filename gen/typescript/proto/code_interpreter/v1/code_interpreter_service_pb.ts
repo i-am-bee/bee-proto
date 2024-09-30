@@ -25,11 +25,6 @@ import { Message, proto3 } from "@bufbuild/protobuf";
  */
 export class ExecuteRequest extends Message<ExecuteRequest> {
   /**
-   * @generated from field: string executor_id = 1;
-   */
-  executorId = "";
-
-  /**
    * @generated from field: string source_code = 2;
    */
   sourceCode = "";
@@ -47,7 +42,6 @@ export class ExecuteRequest extends Message<ExecuteRequest> {
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "code_interpreter.v1.ExecuteRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "executor_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "source_code", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "files", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 9 /* ScalarType.STRING */} },
   ]);
@@ -302,11 +296,6 @@ export class ParseCustomToolResponse extends Message<ParseCustomToolResponse> {
  */
 export class ExecuteCustomToolRequest extends Message<ExecuteCustomToolRequest> {
   /**
-   * @generated from field: string executor_id = 1;
-   */
-  executorId = "";
-
-  /**
    * @generated from field: string tool_source_code = 2;
    */
   toolSourceCode = "";
@@ -324,7 +313,6 @@ export class ExecuteCustomToolRequest extends Message<ExecuteCustomToolRequest> 
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "code_interpreter.v1.ExecuteCustomToolRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "executor_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "tool_source_code", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "tool_input_json", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);

@@ -7,7 +7,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class ExecuteRequest(_message.Message):
-    __slots__ = ("executor_id", "source_code", "files")
+    __slots__ = ("source_code", "files")
     class FilesEntry(_message.Message):
         __slots__ = ("key", "value")
         KEY_FIELD_NUMBER: _ClassVar[int]
@@ -15,13 +15,11 @@ class ExecuteRequest(_message.Message):
         key: str
         value: str
         def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
-    EXECUTOR_ID_FIELD_NUMBER: _ClassVar[int]
     SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
     FILES_FIELD_NUMBER: _ClassVar[int]
-    executor_id: str
     source_code: str
     files: _containers.ScalarMap[str, str]
-    def __init__(self, executor_id: _Optional[str] = ..., source_code: _Optional[str] = ..., files: _Optional[_Mapping[str, str]] = ...) -> None: ...
+    def __init__(self, source_code: _Optional[str] = ..., files: _Optional[_Mapping[str, str]] = ...) -> None: ...
 
 class ExecuteResponse(_message.Message):
     __slots__ = ("stdout", "stderr", "exit_code", "files")
@@ -73,14 +71,12 @@ class ParseCustomToolResponse(_message.Message):
     def __init__(self, success: _Optional[_Union[ParseCustomToolResponseSuccess, _Mapping]] = ..., error: _Optional[_Union[ParseCustomToolResponseError, _Mapping]] = ...) -> None: ...
 
 class ExecuteCustomToolRequest(_message.Message):
-    __slots__ = ("executor_id", "tool_source_code", "tool_input_json")
-    EXECUTOR_ID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("tool_source_code", "tool_input_json")
     TOOL_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
     TOOL_INPUT_JSON_FIELD_NUMBER: _ClassVar[int]
-    executor_id: str
     tool_source_code: str
     tool_input_json: str
-    def __init__(self, executor_id: _Optional[str] = ..., tool_source_code: _Optional[str] = ..., tool_input_json: _Optional[str] = ...) -> None: ...
+    def __init__(self, tool_source_code: _Optional[str] = ..., tool_input_json: _Optional[str] = ...) -> None: ...
 
 class ExecuteCustomToolResponseSuccess(_message.Message):
     __slots__ = ("tool_output_json",)
