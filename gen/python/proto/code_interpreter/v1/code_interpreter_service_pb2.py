@@ -29,7 +29,7 @@ _sym_db = _symbol_database.Default()
 from buf.validate import validate_pb2 as buf_dot_validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8proto/code_interpreter/v1/code_interpreter_service.proto\x12\x13\x63ode_interpreter.v1\x1a\x1b\x62uf/validate/validate.proto\"\xea\x01\n\x0e\x45xecuteRequest\x12\x1f\n\x0bsource_code\x18\x02 \x01(\tR\nsourceCode\x12w\n\x05\x66iles\x18\x03 \x03(\x0b\x32..code_interpreter.v1.ExecuteRequest.FilesEntryB1\xbaH.\x9a\x01+\"\rr\x0b\x32\t^/[^/].*$*\x1ar\x18\x32\x16^[0-9a-zA-Z_-]{1,255}$R\x05\x66iles\x1a\x38\n\nFilesEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01J\x04\x08\x01\x10\x02\"\x92\x02\n\x0f\x45xecuteResponse\x12\x16\n\x06stdout\x18\x01 \x01(\tR\x06stdout\x12\x16\n\x06stderr\x18\x02 \x01(\tR\x06stderr\x12\x1b\n\texit_code\x18\x03 \x01(\x05R\x08\x65xitCode\x12x\n\x05\x66iles\x18\x04 \x03(\x0b\x32/.code_interpreter.v1.ExecuteResponse.FilesEntryB1\xbaH.\x9a\x01+\"\rr\x0b\x32\t^/[^/].*$*\x1ar\x18\x32\x16^[0-9a-zA-Z_-]{1,255}$R\x05\x66iles\x1a\x38\n\nFilesEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\"B\n\x16ParseCustomToolRequest\x12(\n\x10tool_source_code\x18\x01 \x01(\tR\x0etoolSourceCode\"\x9d\x01\n\x1eParseCustomToolResponseSuccess\x12\x1b\n\ttool_name\x18\x01 \x01(\tR\x08toolName\x12)\n\x10tool_description\x18\x02 \x01(\tR\x0ftoolDescription\x12\x33\n\x16tool_input_schema_json\x18\x03 \x01(\tR\x13toolInputSchemaJson\"E\n\x1cParseCustomToolResponseError\x12%\n\x0e\x65rror_messages\x18\x01 \x03(\tR\rerrorMessages\"\xc1\x01\n\x17ParseCustomToolResponse\x12O\n\x07success\x18\x01 \x01(\x0b\x32\x33.code_interpreter.v1.ParseCustomToolResponseSuccessH\x00R\x07success\x12I\n\x05\x65rror\x18\x02 \x01(\x0b\x32\x31.code_interpreter.v1.ParseCustomToolResponseErrorH\x00R\x05\x65rrorB\n\n\x08response\"r\n\x18\x45xecuteCustomToolRequest\x12(\n\x10tool_source_code\x18\x02 \x01(\tR\x0etoolSourceCode\x12&\n\x0ftool_input_json\x18\x03 \x01(\tR\rtoolInputJsonJ\x04\x08\x01\x10\x02\"L\n ExecuteCustomToolResponseSuccess\x12(\n\x10tool_output_json\x18\x01 \x01(\tR\x0etoolOutputJson\"8\n\x1e\x45xecuteCustomToolResponseError\x12\x16\n\x06stderr\x18\x01 \x01(\tR\x06stderr\"\xc7\x01\n\x19\x45xecuteCustomToolResponse\x12Q\n\x07success\x18\x01 \x01(\x0b\x32\x35.code_interpreter.v1.ExecuteCustomToolResponseSuccessH\x00R\x07success\x12K\n\x05\x65rror\x18\x02 \x01(\x0b\x32\x33.code_interpreter.v1.ExecuteCustomToolResponseErrorH\x00R\x05\x65rrorB\n\n\x08response2\xd0\x02\n\x16\x43odeInterpreterService\x12T\n\x07\x45xecute\x12#.code_interpreter.v1.ExecuteRequest\x1a$.code_interpreter.v1.ExecuteResponse\x12l\n\x0fParseCustomTool\x12+.code_interpreter.v1.ParseCustomToolRequest\x1a,.code_interpreter.v1.ParseCustomToolResponse\x12r\n\x11\x45xecuteCustomTool\x12-.code_interpreter.v1.ExecuteCustomToolRequest\x1a..code_interpreter.v1.ExecuteCustomToolResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8proto/code_interpreter/v1/code_interpreter_service.proto\x12\x13\x63ode_interpreter.v1\x1a\x1b\x62uf/validate/validate.proto\"\x9e\x02\n\x0e\x45xecuteRequest\x12\x1f\n\x0bsource_code\x18\x02 \x01(\tR\nsourceCode\x12w\n\x05\x66iles\x18\x03 \x03(\x0b\x32..code_interpreter.v1.ExecuteRequest.FilesEntryB1\xbaH.\x9a\x01+\"\rr\x0b\x32\t^/[^/].*$*\x1ar\x18\x32\x16^[0-9a-zA-Z_-]{1,255}$R\x05\x66iles\x12\x32\n\x08language\x18\x04 \x01(\tB\x16\xbaH\x13r\x11\x32\x0f^(python|bash)$R\x08language\x1a\x38\n\nFilesEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01J\x04\x08\x01\x10\x02\"\x92\x02\n\x0f\x45xecuteResponse\x12\x16\n\x06stdout\x18\x01 \x01(\tR\x06stdout\x12\x16\n\x06stderr\x18\x02 \x01(\tR\x06stderr\x12\x1b\n\texit_code\x18\x03 \x01(\x05R\x08\x65xitCode\x12x\n\x05\x66iles\x18\x04 \x03(\x0b\x32/.code_interpreter.v1.ExecuteResponse.FilesEntryB1\xbaH.\x9a\x01+\"\rr\x0b\x32\t^/[^/].*$*\x1ar\x18\x32\x16^[0-9a-zA-Z_-]{1,255}$R\x05\x66iles\x1a\x38\n\nFilesEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\"B\n\x16ParseCustomToolRequest\x12(\n\x10tool_source_code\x18\x01 \x01(\tR\x0etoolSourceCode\"\x9d\x01\n\x1eParseCustomToolResponseSuccess\x12\x1b\n\ttool_name\x18\x01 \x01(\tR\x08toolName\x12)\n\x10tool_description\x18\x02 \x01(\tR\x0ftoolDescription\x12\x33\n\x16tool_input_schema_json\x18\x03 \x01(\tR\x13toolInputSchemaJson\"E\n\x1cParseCustomToolResponseError\x12%\n\x0e\x65rror_messages\x18\x01 \x03(\tR\rerrorMessages\"\xc1\x01\n\x17ParseCustomToolResponse\x12O\n\x07success\x18\x01 \x01(\x0b\x32\x33.code_interpreter.v1.ParseCustomToolResponseSuccessH\x00R\x07success\x12I\n\x05\x65rror\x18\x02 \x01(\x0b\x32\x31.code_interpreter.v1.ParseCustomToolResponseErrorH\x00R\x05\x65rrorB\n\n\x08response\"r\n\x18\x45xecuteCustomToolRequest\x12(\n\x10tool_source_code\x18\x02 \x01(\tR\x0etoolSourceCode\x12&\n\x0ftool_input_json\x18\x03 \x01(\tR\rtoolInputJsonJ\x04\x08\x01\x10\x02\"L\n ExecuteCustomToolResponseSuccess\x12(\n\x10tool_output_json\x18\x01 \x01(\tR\x0etoolOutputJson\"8\n\x1e\x45xecuteCustomToolResponseError\x12\x16\n\x06stderr\x18\x01 \x01(\tR\x06stderr\"\xc7\x01\n\x19\x45xecuteCustomToolResponse\x12Q\n\x07success\x18\x01 \x01(\x0b\x32\x35.code_interpreter.v1.ExecuteCustomToolResponseSuccessH\x00R\x07success\x12K\n\x05\x65rror\x18\x02 \x01(\x0b\x32\x33.code_interpreter.v1.ExecuteCustomToolResponseErrorH\x00R\x05\x65rrorB\n\n\x08response2\xd0\x02\n\x16\x43odeInterpreterService\x12T\n\x07\x45xecute\x12#.code_interpreter.v1.ExecuteRequest\x1a$.code_interpreter.v1.ExecuteResponse\x12l\n\x0fParseCustomTool\x12+.code_interpreter.v1.ParseCustomToolRequest\x1a,.code_interpreter.v1.ParseCustomToolResponse\x12r\n\x11\x45xecuteCustomTool\x12-.code_interpreter.v1.ExecuteCustomToolRequest\x1a..code_interpreter.v1.ExecuteCustomToolResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -40,34 +40,36 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_EXECUTEREQUEST_FILESENTRY']._serialized_options = b'8\001'
   _globals['_EXECUTEREQUEST'].fields_by_name['files']._loaded_options = None
   _globals['_EXECUTEREQUEST'].fields_by_name['files']._serialized_options = b'\272H.\232\001+\"\rr\0132\t^/[^/].*$*\032r\0302\026^[0-9a-zA-Z_-]{1,255}$'
+  _globals['_EXECUTEREQUEST'].fields_by_name['language']._loaded_options = None
+  _globals['_EXECUTEREQUEST'].fields_by_name['language']._serialized_options = b'\272H\023r\0212\017^(python|bash)$'
   _globals['_EXECUTERESPONSE_FILESENTRY']._loaded_options = None
   _globals['_EXECUTERESPONSE_FILESENTRY']._serialized_options = b'8\001'
   _globals['_EXECUTERESPONSE'].fields_by_name['files']._loaded_options = None
   _globals['_EXECUTERESPONSE'].fields_by_name['files']._serialized_options = b'\272H.\232\001+\"\rr\0132\t^/[^/].*$*\032r\0302\026^[0-9a-zA-Z_-]{1,255}$'
   _globals['_EXECUTEREQUEST']._serialized_start=111
-  _globals['_EXECUTEREQUEST']._serialized_end=345
-  _globals['_EXECUTEREQUEST_FILESENTRY']._serialized_start=283
-  _globals['_EXECUTEREQUEST_FILESENTRY']._serialized_end=339
-  _globals['_EXECUTERESPONSE']._serialized_start=348
-  _globals['_EXECUTERESPONSE']._serialized_end=622
-  _globals['_EXECUTERESPONSE_FILESENTRY']._serialized_start=283
-  _globals['_EXECUTERESPONSE_FILESENTRY']._serialized_end=339
-  _globals['_PARSECUSTOMTOOLREQUEST']._serialized_start=624
-  _globals['_PARSECUSTOMTOOLREQUEST']._serialized_end=690
-  _globals['_PARSECUSTOMTOOLRESPONSESUCCESS']._serialized_start=693
-  _globals['_PARSECUSTOMTOOLRESPONSESUCCESS']._serialized_end=850
-  _globals['_PARSECUSTOMTOOLRESPONSEERROR']._serialized_start=852
-  _globals['_PARSECUSTOMTOOLRESPONSEERROR']._serialized_end=921
-  _globals['_PARSECUSTOMTOOLRESPONSE']._serialized_start=924
-  _globals['_PARSECUSTOMTOOLRESPONSE']._serialized_end=1117
-  _globals['_EXECUTECUSTOMTOOLREQUEST']._serialized_start=1119
-  _globals['_EXECUTECUSTOMTOOLREQUEST']._serialized_end=1233
-  _globals['_EXECUTECUSTOMTOOLRESPONSESUCCESS']._serialized_start=1235
-  _globals['_EXECUTECUSTOMTOOLRESPONSESUCCESS']._serialized_end=1311
-  _globals['_EXECUTECUSTOMTOOLRESPONSEERROR']._serialized_start=1313
-  _globals['_EXECUTECUSTOMTOOLRESPONSEERROR']._serialized_end=1369
-  _globals['_EXECUTECUSTOMTOOLRESPONSE']._serialized_start=1372
-  _globals['_EXECUTECUSTOMTOOLRESPONSE']._serialized_end=1571
-  _globals['_CODEINTERPRETERSERVICE']._serialized_start=1574
-  _globals['_CODEINTERPRETERSERVICE']._serialized_end=1910
+  _globals['_EXECUTEREQUEST']._serialized_end=397
+  _globals['_EXECUTEREQUEST_FILESENTRY']._serialized_start=335
+  _globals['_EXECUTEREQUEST_FILESENTRY']._serialized_end=391
+  _globals['_EXECUTERESPONSE']._serialized_start=400
+  _globals['_EXECUTERESPONSE']._serialized_end=674
+  _globals['_EXECUTERESPONSE_FILESENTRY']._serialized_start=335
+  _globals['_EXECUTERESPONSE_FILESENTRY']._serialized_end=391
+  _globals['_PARSECUSTOMTOOLREQUEST']._serialized_start=676
+  _globals['_PARSECUSTOMTOOLREQUEST']._serialized_end=742
+  _globals['_PARSECUSTOMTOOLRESPONSESUCCESS']._serialized_start=745
+  _globals['_PARSECUSTOMTOOLRESPONSESUCCESS']._serialized_end=902
+  _globals['_PARSECUSTOMTOOLRESPONSEERROR']._serialized_start=904
+  _globals['_PARSECUSTOMTOOLRESPONSEERROR']._serialized_end=973
+  _globals['_PARSECUSTOMTOOLRESPONSE']._serialized_start=976
+  _globals['_PARSECUSTOMTOOLRESPONSE']._serialized_end=1169
+  _globals['_EXECUTECUSTOMTOOLREQUEST']._serialized_start=1171
+  _globals['_EXECUTECUSTOMTOOLREQUEST']._serialized_end=1285
+  _globals['_EXECUTECUSTOMTOOLRESPONSESUCCESS']._serialized_start=1287
+  _globals['_EXECUTECUSTOMTOOLRESPONSESUCCESS']._serialized_end=1363
+  _globals['_EXECUTECUSTOMTOOLRESPONSEERROR']._serialized_start=1365
+  _globals['_EXECUTECUSTOMTOOLRESPONSEERROR']._serialized_end=1421
+  _globals['_EXECUTECUSTOMTOOLRESPONSE']._serialized_start=1424
+  _globals['_EXECUTECUSTOMTOOLRESPONSE']._serialized_end=1623
+  _globals['_CODEINTERPRETERSERVICE']._serialized_start=1626
+  _globals['_CODEINTERPRETERSERVICE']._serialized_end=1962
 # @@protoc_insertion_point(module_scope)
