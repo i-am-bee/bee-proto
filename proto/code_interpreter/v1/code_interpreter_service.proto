@@ -31,7 +31,6 @@ message ExecuteRequest {
     keys: { string: { pattern: "^/[^/].*$" } }
     values: { string: { pattern: "^[0-9a-zA-Z_-]{1,255}$" } }
   }];
-  string language = 4 [(buf.validate.field).string.pattern = "^(python|bash)$"];
 }
 
 message ExecuteResponse {

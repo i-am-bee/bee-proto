@@ -7,7 +7,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class ExecuteRequest(_message.Message):
-    __slots__ = ("source_code", "files", "language")
+    __slots__ = ("source_code", "files")
     class FilesEntry(_message.Message):
         __slots__ = ("key", "value")
         KEY_FIELD_NUMBER: _ClassVar[int]
@@ -17,11 +17,9 @@ class ExecuteRequest(_message.Message):
         def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
     SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
     FILES_FIELD_NUMBER: _ClassVar[int]
-    LANGUAGE_FIELD_NUMBER: _ClassVar[int]
     source_code: str
     files: _containers.ScalarMap[str, str]
-    language: str
-    def __init__(self, source_code: _Optional[str] = ..., files: _Optional[_Mapping[str, str]] = ..., language: _Optional[str] = ...) -> None: ...
+    def __init__(self, source_code: _Optional[str] = ..., files: _Optional[_Mapping[str, str]] = ...) -> None: ...
 
 class ExecuteResponse(_message.Message):
     __slots__ = ("stdout", "stderr", "exit_code", "files")

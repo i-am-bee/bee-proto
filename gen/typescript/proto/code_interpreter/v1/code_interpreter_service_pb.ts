@@ -34,11 +34,6 @@ export class ExecuteRequest extends Message<ExecuteRequest> {
    */
   files: { [key: string]: string } = {};
 
-  /**
-   * @generated from field: string language = 4;
-   */
-  language = "";
-
   constructor(data?: PartialMessage<ExecuteRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -49,7 +44,6 @@ export class ExecuteRequest extends Message<ExecuteRequest> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 2, name: "source_code", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "files", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 9 /* ScalarType.STRING */} },
-    { no: 4, name: "language", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ExecuteRequest {
